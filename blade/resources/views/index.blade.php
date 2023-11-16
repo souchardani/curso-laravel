@@ -1,13 +1,11 @@
-{{-- dentro de laravel las vistas tienen la extension blade.php --}}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{{-- directiva de blade --}}
+{{-- recuerda que para las vistas la ruta parte de views --}}
+@extends('layouts.landing')
+{{-- como esa estructura tiene 2 zonas para inyectar conttenido, podemos hacerlo con @section --}}
+{{-- @section tiene 2 parametros, el nombre de la zona y el contenido, puede ser separado con comas, o para contenido html,
+    usamos end section y dentro ponemos todo el contenido --}}
+{{-- las secciones son opcionales, no es obligatorio cumplimentarlas --}}
+@section("title", "Home")
+@section("content")
     <h1>Index</h1>
-</body>
-</html>
+@endsection
