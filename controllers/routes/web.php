@@ -8,3 +8,4 @@ use App\Http\Controllers\UserController;
 //hay que pasar un array de dos valores: valor 1 la clase del controlador a usar,
 //valor 2 el metodo del controlador que maneja la vista
 Route::get('/', [UserController::class, 'index'])->name('user.index');
+Route::get('/create', [UserCOntroller::class, 'create'])->name('user.create');

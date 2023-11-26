@@ -8,10 +8,15 @@
 </head>
 <body>
     <h1>User list:</h1>
-    <ul>
-        @foreach ($users as $user)
-            <li>{{ $user->name }}</li>
-        @endforeach
-    </ul>
+    @if($users->isEmpty())
+        <p>The user list is empty</p>
+
+    @else
+        <ul>
+            @foreach ($users as $user)
+                <li>{{ $user->name }} || Edad: {{ $user->age }} years old</li>
+            @endforeach
+        </ul>
+    @endif
 </body>
 </html>
